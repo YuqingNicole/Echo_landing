@@ -27,8 +27,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ userInfo }) => {
                     <img 
                       src={userInfo.photo_url} 
                       alt={userInfo.display_name} 
-                      className="h-8 w-8 rounded-full ring-2 transition-all-smooth hover:ring-opacity-70"
-                      style={{ringColor: '#6EC6CA40'}}
+                      className="h-8 w-8 rounded-full ring-2 ring-[#6EC6CA40] transition-all-smooth hover:ring-opacity-70"
                     />
                   )}
                   <span className="font-medium" style={{color: '#2C3E50'}}>欢迎，{userInfo.display_name}</span>
@@ -171,68 +170,26 @@ const LandingPage: React.FC<LandingPageProps> = ({ userInfo }) => {
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-            <div className="glass-card p-10 rounded-3xl card-hover animate-slide-up group relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-24 h-24 opacity-10 animate-float">
-                <img 
-                  src="https://scitechdaily.com/images/AI-Brain-Circuit-Connectivity.jpg" 
-                  alt="AI脑神经网络连接"
-                  className="w-full h-full object-cover rounded-full"
-                />
-              </div>
-              <div className="relative mb-8 z-10">
-                <div className="w-20 h-20 rounded-3xl flex items-center justify-center animate-glow-pulse group-hover:animate-wave-float" 
-                     style={{background: 'linear-gradient(135deg, #6EC6CA 0%, #8fd3d6 100())'}}>
-                  <Brain className="h-10 w-10 text-white" />
-                </div>
-                <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full animate-ping" style={{backgroundColor: '#4A5568'}}></div>
-              </div>
-              <h3 className="text-lg font-semibold mb-4" style={{color: '#2C3E50'}}>基于 Schwartz 价值观模型</h3>
-              <p className="leading-relaxed text-base" style={{color: '#64748b'}}>
-                对话中提取长期兴趣与倾向，构建科学的价值观画像
-              </p>
-            </div>
+            <div className="glass-card p-10 rounded-3xl">
+  <h3 className="text-lg font-semibold mb-4" style={{color: '#2C3E50'}}>基于 Schwartz 价值观模型</h3>
+  <p className="leading-relaxed text-base" style={{color: '#64748b'}}>
+    对话中提取长期兴趣与倾向，构建科学的价值观画像
+  </p>
+</div>
             
-            <div className="glass-card p-10 rounded-3xl card-hover animate-slide-up animate-delay-200 group relative overflow-hidden">
-              <div className="absolute top-2 right-2 w-20 h-20 opacity-15 animate-wave-float animate-delay-200">
-                <img 
-                  src="https://neurosciencenews.com/files/2021/08/brain-connectivity-ai-neurosinces-public.jpg" 
-                  alt="AI人工智能神经网络"
-                  className="w-full h-full object-cover rounded-2xl"
-                />
-              </div>
-              <div className="relative mb-8 z-10">
-                <div className="w-20 h-20 rounded-3xl flex items-center justify-center animate-glow-pulse group-hover:animate-wave-float" 
-                     style={{background: 'linear-gradient(135deg, #6EC6CA 0%, #8fd3d6 100%)'}}>
-                  <Target className="h-10 w-10 text-white" />
-                </div>
-                <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full animate-ping animate-delay-100" style={{backgroundColor: '#6EC6CA'}}></div>
-              </div>
-              <h3 className="text-xl font-bold mb-4" style={{color: '#2C3E50'}}>AI/NLP 深度解析</h3>
-              <p className="leading-relaxed text-lg" style={{color: '#64748b'}}>
-                利用先进的AI/NLP技术解析用户对话语料，生成结构化价值观分布图谱
-              </p>
-            </div>
+            <div className="glass-card p-10 rounded-3xl">
+  <h3 className="text-xl font-bold mb-4" style={{color: '#2C3E50'}}>AI/NLP 深度解析</h3>
+  <p className="leading-relaxed text-lg" style={{color: '#64748b'}}>
+    利用先进的AI/NLP技术解析用户对话语料，生成结构化价值观分布图谱
+  </p>
+</div>
             
-            <div className="glass-card p-10 rounded-3xl card-hover animate-slide-up animate-delay-400 group relative overflow-hidden">
-              <div className="absolute top-4 right-4 w-16 h-16 opacity-20 animate-pulse-soft">
-                <img 
-                  src="https://media.istockphoto.com/id/2094337676/photo/diverse-team-working-together-in-modern-co-working-space.jpg" 
-                  alt="团队协作"
-                  className="w-full h-full object-cover rounded-xl"
-                />
-              </div>
-              <div className="relative mb-8 z-10">
-                <div className="w-20 h-20 rounded-3xl flex items-center justify-center animate-glow-pulse group-hover:animate-wave-float" 
-                     style={{background: 'linear-gradient(135deg, #4A5568 0%, #718096 100%)'}}>
-                  <Zap className="h-10 w-10 text-white" />
-                </div>
-                <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full animate-ping animate-delay-200" style={{backgroundColor: '#BFD8D2'}}></div>
-              </div>
-              <h3 className="text-xl font-bold mb-4" style={{color: '#2C3E50'}}>智能记忆系统</h3>
-              <p className="leading-relaxed text-lg" style={{color: '#64748b'}}>
-                长短期记忆机制完美结合，记录短期偏好与长期价值信念
-              </p>
-            </div>
+            <div className="glass-card p-10 rounded-3xl">
+  <h3 className="text-xl font-bold mb-4" style={{color: '#2C3E50'}}>智能记忆系统</h3>
+  <p className="leading-relaxed text-lg" style={{color: '#64748b'}}>
+    长短期记忆机制完美结合，记录短期偏好与长期价值信念
+  </p>
+</div>
           </div>
         </div>
       </section>
@@ -269,11 +226,14 @@ const LandingPage: React.FC<LandingPageProps> = ({ userInfo }) => {
               </div>
               <div className="flex items-start space-x-6 relative z-10">
                 <div className="relative flex-shrink-0">
-                  <div className="w-16 h-16 rounded-2xl flex items-center justify-center animate-glow-pulse group-hover:animate-wave-float" 
-                       style={{background: 'linear-gradient(135deg, #6EC6CA 0%, #8fd3d6 100())'}}>
-                    <Users className="h-8 w-8 text-white" />
-                  </div>
-                  <div className="absolute -top-1 -right-1 w-4 h-4 rounded-full animate-ping" style={{backgroundColor: '#4A5568'}}></div>
+                  <div className="w-16 h-16 rounded-2xl flex items-center justify-center bg-gradient-to-br from-[#6EC6CA] to-[#8fd3d6]">
+  {/* 心形+网络 SVG */}
+  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="16" cy="16" r="14" fill="#fff" fillOpacity="0.18"/>
+    <path d="M16 25s-7-4.5-7-10.5a4.5 4.5 0 018.6-2.1A4.5 4.5 0 0123 14.5C23 20.5 16 25 16 25z" stroke="#6EC6CA" strokeWidth="2" fill="#6EC6CA" fillOpacity="0.7"/>
+    <path d="M10 17c2 1.5 8 1.5 10 0" stroke="#fff" strokeWidth="1.2" strokeLinecap="round"/>
+  </svg>
+</div>
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-bold mb-4" style={{color: '#2C3E50'}}>价值观驱动的匹配</h3>
@@ -288,11 +248,18 @@ const LandingPage: React.FC<LandingPageProps> = ({ userInfo }) => {
             <div className="glass-card p-10 rounded-3xl card-hover animate-slide-up animate-delay-200 group">
               <div className="flex items-start space-x-6">
                 <div className="relative flex-shrink-0">
-                  <div className="w-16 h-16 rounded-2xl flex items-center justify-center animate-glow-pulse group-hover:animate-wave-float" 
-                       style={{background: 'linear-gradient(135deg, #6EC6CA 0%, #BFD8D2 100())'}}>
-                    <MessageCircle className="h-8 w-8 text-white" />
-                  </div>
-                  <div className="absolute -top-1 -right-1 w-4 h-4 rounded-full animate-ping animate-delay-100" style={{backgroundColor: '#6EC6CA'}}></div>
+                  <div className="w-16 h-16 rounded-2xl flex items-center justify-center bg-gradient-to-br from-[#6EC6CA] to-[#BFD8D2]">
+  {/* 语音+人像 SVG */}
+  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="16" cy="16" r="14" fill="#fff" fillOpacity="0.18"/>
+    <ellipse cx="16" cy="13" rx="5" ry="4" fill="#6EC6CA" fillOpacity="0.7"/>
+    <ellipse cx="16" cy="23" rx="7" ry="3" fill="#BFD8D2" fillOpacity="0.7"/>
+    <path d="M21 13c0-2.5-2-4.5-5-4.5s-5 2-5 4.5" stroke="#fff" strokeWidth="1.2"/>
+    <path d="M19 13a3 3 0 11-6 0" stroke="#fff" strokeWidth="1.2"/>
+    <path d="M22 8l2 2" stroke="#6EC6CA" strokeWidth="1.2" strokeLinecap="round"/>
+    <path d="M10 8l-2 2" stroke="#6EC6CA" strokeWidth="1.2" strokeLinecap="round"/>
+  </svg>
+</div>
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-bold mb-4" style={{color: '#2C3E50'}}>个性化 Voice Agent</h3>
@@ -307,11 +274,18 @@ const LandingPage: React.FC<LandingPageProps> = ({ userInfo }) => {
             <div className="glass-card p-10 rounded-3xl card-hover animate-slide-up animate-delay-300 group">
               <div className="flex items-start space-x-6">
                 <div className="relative flex-shrink-0">
-                  <div className="w-16 h-16 rounded-2xl flex items-center justify-center animate-glow-pulse group-hover:animate-wave-float" 
-                       style={{background: 'linear-gradient(135deg, #4A5568 0%, #718096 100())'}}>
-                    <Sparkles className="h-8 w-8 text-white" />
-                  </div>
-                  <div className="absolute -top-1 -right-1 w-4 h-4 rounded-full animate-ping animate-delay-200" style={{backgroundColor: '#BFD8D2'}}></div>
+                  <div className="w-16 h-16 rounded-2xl flex items-center justify-center bg-gradient-to-br from-[#4A5568] to-[#718096]">
+  {/* 多节点协作 SVG */}
+  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="16" cy="16" r="14" fill="#fff" fillOpacity="0.18"/>
+    <circle cx="16" cy="16" r="5" fill="#4A5568" fillOpacity="0.7"/>
+    <circle cx="7.5" cy="16" r="2" fill="#BFD8D2"/>
+    <circle cx="24.5" cy="16" r="2" fill="#BFD8D2"/>
+    <circle cx="16" cy="7.5" r="2" fill="#BFD8D2"/>
+    <circle cx="16" cy="24.5" r="2" fill="#BFD8D2"/>
+    <path d="M16 11v-1.5M16 21v1.5M11 16H8.5M21 16h2.5" stroke="#fff" strokeWidth="1.2"/>
+  </svg>
+</div>
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-bold mb-4" style={{color: '#2C3E50'}}>Agent间智能协作</h3>
@@ -326,11 +300,15 @@ const LandingPage: React.FC<LandingPageProps> = ({ userInfo }) => {
             <div className="glass-card p-10 rounded-3xl card-hover animate-slide-up animate-delay-400 group">
               <div className="flex items-start space-x-6">
                 <div className="relative flex-shrink-0">
-                  <div className="w-16 h-16 rounded-2xl flex items-center justify-center animate-glow-pulse group-hover:animate-wave-float" 
-                       style={{background: 'linear-gradient(135deg, #BFD8D2 0%, #d1e3de 100())'}}>
-                    <Users className="h-8 w-8 text-white" />
-                  </div>
-                  <div className="absolute -top-1 -right-1 w-4 h-4 rounded-full animate-ping animate-delay-300" style={{backgroundColor: '#4A5568'}}></div>
+                  <div className="w-16 h-16 rounded-2xl flex items-center justify-center bg-gradient-to-br from-[#BFD8D2] to-[#d1e3de]">
+  {/* 火焰+人 SVG */}
+  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="16" cy="16" r="14" fill="#fff" fillOpacity="0.18"/>
+    <path d="M16 10c2 2 4 4.5 4 7a4 4.5 0 11-8 0c0-2.5 2-5 4-7z" fill="#BFD8D2" fillOpacity="0.7" stroke="#4A5568" strokeWidth="1.2"/>
+    <circle cx="16" cy="19" r="2" fill="#4A5568"/>
+    <path d="M16 12v2" stroke="#fff" strokeWidth="1.2" strokeLinecap="round"/>
+  </svg>
+</div>
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-bold mb-4" style={{color: '#2C3E50'}}>真实自我激发系统</h3>
