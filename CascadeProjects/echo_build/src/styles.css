@@ -1,0 +1,215 @@
+/* src/styles.css
+   全局样式，参考 Hinge 官网风格 */
+
+:root {
+  --brand-purple: #6f3ff5;
+  --brand-dark: #111;
+  --brand-light: #faf9f6;
+  --brand-gray: #e6e6e6;
+  --brand-accent: #f5eaff;
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 8px;
+  --shadow-card: 0 4px 24px 0 rgba(111,63,245,0.08);
+  --font-main: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--brand-light);
+  color: var(--brand-dark);
+  font-family: var(--font-main);
+  font-size: 15px;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-main);
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+}
+
+button, .btn {
+  background: var(--brand-purple);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 0.75em 2em;
+  font-size: 1.1em;
+  font-weight: 600;
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+button:hover, .btn:hover {
+  background: #5931c6;
+  box-shadow: 0 8px 32px 0 rgba(111,63,245,0.16);
+}
+
+section {
+  padding: 4rem 0 3rem 0;
+  background: #fff;
+  border-radius: 0;
+  margin: 0;
+  max-width: none;
+  box-shadow: none;
+}
+
+.header {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.03);
+  padding: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.footer {
+  width: 100%;
+  background: var(--brand-light);
+  color: #888;
+  text-align: center;
+  padding: 2rem 0 1rem 0;
+  font-size: 1em;
+  border-top: 1px solid var(--brand-gray);
+}
+
+.cta {
+  background: var(--brand-accent);
+  border-radius: var(--radius-lg);
+  padding: 3rem 2rem;
+  text-align: center;
+  margin: 3rem auto;
+  max-width: 700px;
+  box-shadow: var(--shadow-card);
+}
+
+.card {
+  background: #fff;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: 2rem;
+  margin: 1rem 0;
+}
+
+.topbar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: #fff;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  gap: 6vw;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.03);
+  padding: 1.5rem 0 0.5rem 0;
+}
+.topbar-tab {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #181818;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transition: color 0.2s;
+}
+.topbar-tab.active {
+  color: #181818;
+}
+.topbar-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #181818;
+  margin-top: 0.3em;
+  display: block;
+}
+.topbar-tab:not(.active) .topbar-dot {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  html, body {
+    font-size: 16px;
+  }
+  section, .cta {
+    padding: 2rem 0.5rem;
+    max-width: 98vw;
+  }
+  .header, .footer {
+    padding: 1rem 0.5rem;
+  }
+  .labs-section {
+    flex-direction: column !important;
+    gap: 2rem !important;
+    padding: 2.5rem 0.5rem !important;
+  }
+  .labs-section-img img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.labs-hero {
+  padding: 5rem 0 3rem 0;
+  text-align: center;
+  background: #faf9f6;
+}
+.labs-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+.labs-hero p {
+  font-size: 1.25rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.labs-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 4rem 0;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  margin-bottom: 2.5rem;
+}
+.labs-section.reverse {
+  flex-direction: row-reverse;
+  background: var(--brand-accent);
+}
+.labs-section-img {
+  flex: 1 1 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.labs-section-content {
+  flex: 1 1 50%;
+}
+.labs-section-content h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.labs-section-content p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
+}
+

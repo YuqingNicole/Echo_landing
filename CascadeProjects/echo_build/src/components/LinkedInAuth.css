@@ -1,0 +1,38 @@
+.linkedin-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #0a66c2;
+  color: white;
+  border: none;
+  border-radius: 24px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.linkedin-button:hover {
+  background-color: #004182;
+}
+
+.linkedin-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.linkedin-logo {
+  height: 20px;
+  width: auto;
+}
+
+.linkedin-auth {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}

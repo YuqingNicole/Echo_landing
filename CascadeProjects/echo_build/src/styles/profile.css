@@ -1,0 +1,257 @@
+/* Connection Card */
+.connection-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: none;
+  max-width: 480px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  text-align: center;
+  border: none;
+}
+
+.connection-content h2 {
+  color: #5f2d5c;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.connection-content p {
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.linkedin-connect-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #5f2d5c;
+  color: white;
+  border: none;
+  border-radius: 28px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 0 auto 1.5rem;
+  transition: all 0.2s ease;
+  width: 100%;
+  max-width: 280px;
+}
+
+.linkedin-connect-button:hover {
+  background: #4a2457;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(95, 45, 92, 0.2);
+}
+
+.linkedin-connect-button:active {
+  transform: translateY(0);
+}
+
+.linkedin-logo {
+  height: 20px;
+  width: auto;
+}
+
+.privacy-notice {
+  font-size: 0.85rem;
+  color: #999;
+  margin-top: 1.5rem;
+  font-style: italic;
+}
+
+/* Loading State */
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: #5f2d5c;
+  font-weight: 500;
+}
+
+/* Profile Container */
+.profile-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+}
+
+/* Profile Header */
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.profile-avatar {
+  margin-right: 2.5rem;
+}
+
+.avatar {
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  background: #f5f5f5;
+  border-radius: 50%;
+  font-size: 3.5rem;
+  color: #5f2d5c;
+}
+
+.profile-info h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #181818;
+  margin: 0 0 0.5rem 0;
+}
+
+.profile-info p {
+  color: #666;
+  margin: 0 0 1.5rem 0;
+  font-size: 1.1rem;
+}
+
+/* Profile Stats */
+.profile-stats {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 1.5rem;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.stat-icon {
+  font-size: 1.8rem;
+  opacity: 0.9;
+  display: inline-block;
+  min-width: 30px;
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #5f2d5c;
+  line-height: 1.2;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #666;
+  white-space: nowrap;
+}
+
+/* Metrics Grid */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.metric-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.8rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.metric-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.metric-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.metric-icon {
+  font-size: 1.5rem;
+  margin-right: 0.8rem;
+  color: #5f2d5c;
+}
+
+.metric-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.metric-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #5f2d5c;
+  margin: 0.5rem 0;
+  line-height: 1.2;
+}
+
+.metric-description {
+  color: #666;
+  margin: 0.5rem 0 1rem 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.metric-trend {
+  font-size: 0.9rem;
+  color: #5f2d5c;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+  
+  .profile-avatar {
+    margin: 0 0 1.5rem 0;
+  }
+  
+  .profile-stats {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem 3rem;
+  }
+  
+  .metrics-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .profile-stats {
+    gap: 1.5rem;
+  }
+  
+  .profile-container {
+    padding: 0 1rem;
+  }
+}
