@@ -7,6 +7,7 @@ import Features from './components/Features';
 import Footer from './components/Footer';
 import Mission from './components/Mission';
 import Profile from './components/Profile';
+import Connect from './components/Connect';
 
 function Home() {
   return <>
@@ -15,9 +16,6 @@ function Home() {
   </>;
 }
 // Profile component has been moved to a separate file
-function Connect() {
-  return <div style={{padding: '4rem 0 3rem 0', textAlign: 'center'}}>Connect Page</div>;
-}
 
 function App() {
   return (

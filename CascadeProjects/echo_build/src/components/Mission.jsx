@@ -14,6 +14,7 @@ export default function Mission() {
 
   return (
     <div className={`mission-container ${isVisible ? 'visible' : ''}`}>
+      <StatisticSection />
       <section className="mission-hero">
         <div className="mission-image-container">
           <img
@@ -28,6 +29,18 @@ export default function Mission() {
       </section>
       <ValueSection />
     </div>
+  );
+}
+
+function StatisticSection() {
+  return (
+    <section className="statistic-section">
+      <div className="statistic-content">
+        <h1 className="statistic-text">
+          Today, Gen Z gets 1,000 fewer hours of in-person connection time every year, compared to previous generations.
+        </h1>
+      </div>
+    </section>
   );
 }
 

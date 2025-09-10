@@ -1,0 +1,372 @@
+/* Connect Container */
+.connect-container {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  width: 100%;
+  min-height: 100vh;
+  background: #f8fafc;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  position: relative;
+}
+
+.connect-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Header Section */
+.connect-header {
+  text-align: center;
+  padding: 6rem 2rem 3rem;
+  background: #fff;
+}
+
+.connect-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #181818;
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+}
+
+.connect-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin: 0 0 2rem 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.interaction-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.interaction-indicator span {
+  font-size: 1rem;
+  color: #5f2d5c;
+  font-weight: 600;
+}
+
+.progress-bar {
+  width: 200px;
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #5f2d5c;
+  border-radius: 4px;
+  transition: width 0.8s ease-out;
+}
+
+/* Visualization Section */
+.connect-visualization {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+  background: #fff;
+}
+
+.connection-canvas {
+  border-radius: 1.2rem;
+  background: #fff;
+  box-shadow: 0 2px 8px #e5e7eb;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.connection-canvas:hover {
+  transform: translateY(-2px);
+}
+
+.center-label {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 40px);
+  background: #5f2d5c;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.node-label {
+  position: absolute;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #5f2d5c;
+  border: 1px solid rgba(95, 45, 92, 0.2);
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Connection Details Modal */
+.connection-details {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.details-card {
+  background: white;
+  border-radius: 1.2rem;
+  padding: 2rem;
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  animation: slideUp 0.3s ease-out;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #999;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.details-card h3 {
+  font-size: 1.8rem;
+  color: #181818;
+  margin: 0 0 1rem 0;
+  font-weight: 700;
+}
+
+.similarity-score {
+  background: #5f2d5c;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.details-section {
+  margin-bottom: 1.5rem;
+}
+
+.details-section h4 {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.details-section p {
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.interests-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.interest-tag {
+  background: rgba(95, 45, 92, 0.1);
+  color: #5f2d5c;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.connect-btn {
+  width: 100%;
+  background: #5f2d5c;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.connect-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(95, 45, 92, 0.3);
+}
+
+/* Legend */
+.connect-legend {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.legend-dot.center {
+  background: #5f2d5c;
+}
+
+.legend-dot.similar {
+  background: #8e44ad;
+}
+
+.legend-line {
+  width: 20px;
+  height: 2px;
+  background: linear-gradient(90deg, #5f2d5c, transparent);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .connect-title {
+    font-size: 2.8rem;
+  }
+  
+  .connection-canvas {
+    width: 600px;
+    height: 450px;
+  }
+  
+  .connect-legend {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    margin: 2rem auto 0;
+    width: fit-content;
+  }
+}
+
+@media (max-width: 768px) {
+  .connect-header {
+    padding: 2rem 1rem 1rem;
+  }
+  
+  .connect-title {
+    font-size: 2.4rem;
+  }
+  
+  .connect-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .connection-canvas {
+    width: 400px;
+    height: 300px;
+  }
+  
+  .details-card {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .connect-legend {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .connect-title {
+    font-size: 2rem;
+  }
+  
+  .connection-canvas {
+    width: 320px;
+    height: 240px;
+  }
+  
+  .interaction-indicator {
+    margin-top: 1rem;
+  }
+  
+  .progress-bar {
+    width: 150px;
+  }
+}
