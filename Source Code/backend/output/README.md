@@ -1,1 +1,0 @@
-This folder contains the built output assets for the worker "echo-backend" generated at 2025-08-17T02:34:37.264Z.
